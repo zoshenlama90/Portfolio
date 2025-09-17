@@ -1,3 +1,7 @@
+// Force page to load at top
+window.history.scrollRestoration = "manual";
+window.scrollTo(0, 0);
+
 document.addEventListener('DOMContentLoaded', () => {
   // Hamburger toggle
   const navToggle = document.getElementById('mobile-menu');
