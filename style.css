@@ -19,10 +19,11 @@ body { font-family:'Roboto', sans-serif; background:#000; color:#fff; line-heigh
 /* Sections */
 section { 
   min-height:100vh; 
-  padding:150px 20px 60px 20px; /* top padding for navbar */
+  padding:100px 20px 60px 20px; /* reduced top padding */
   text-align:center; 
-  scroll-margin-top:150px; /* offset for fixed navbar */
+  scroll-margin-top:100px; /* offset for fixed navbar */
 }
+#home { padding-top:120px; } /* slightly larger top padding for Home */
 section h2 { margin-bottom:40px; color:#ff6600; font-size:2rem; }
 
 /* Home */
@@ -58,4 +59,5 @@ section h2 { margin-bottom:40px; color:#ff6600; font-size:2rem; }
   .nav-toggle { display:block; }
   .skills-container { flex-direction:column; align-items:center; }
   .skill-row { flex-direction:column; }
+  section { padding-top:80px; scroll-margin-top:80px; }
 }

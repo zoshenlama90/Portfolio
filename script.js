@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', e => {
       e.preventDefault();
       const target = document.querySelector(link.getAttribute('href'));
-      const offset = navbar.offsetHeight + 10; // small gap
+      const offset = navbar.offsetHeight + 5; // small gap
       window.scrollTo({
         top: target.offsetTop - offset,
         behavior: 'smooth'
