@@ -27,4 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', animateSkills);
   window.addEventListener('load', animateSkills);
+
+  // Smooth scroll offset for anchor links
+  const navbar = document.querySelector('.navbar');
+  document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      const offset = navbar.offsetHeight;
+      window.scrollTo({
+        top: target.offsetTop - offset,
+        behavior: 'smooth'
+      });
+      // Close mobile menu on click
+      if(navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        navLinks.style.display = 'none';
+      }
+    });
+  });
 });
