@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     link.addEventListener('click', e => {
       e.preventDefault();
       const target = document.querySelector(link.getAttribute('href'));
-      const offset = navbar.offsetHeight;
+      const offset = navbar.offsetHeight + 10; // small gap
       window.scrollTo({
         top: target.offsetTop - offset,
         behavior: 'smooth'
@@ -46,4 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Ensure page always loads at top
+  window.onbeforeunload = function () { window.scrollTo(0, 0); };
 });
