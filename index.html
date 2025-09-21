@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zoshen Lama Portfolio</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- AOS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">About Me</div>
+  <div class="nav-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+  <div class="nav-links" id="nav-links">
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+  </div>
+</nav>
+
+<!-- Home Section -->
+<section id="home">
+  <div class="home-content" data-aos="fade-up">
+    <img src="profile.jpg" alt="Profile Image" class="profile-img">
+    <h1>नमस्कार<br>म Zoshen Lama</h1>
+    <p>
+      A Front-End Developer<br> 
+      I specialize in building responsive websites using HTML, CSS, JavaScript, and React.
+      I am also skilled in Photoshop and integrate design with code to deliver seamless user experiences.
+    </p>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+  <h2 data-aos="fade-right">Skills</h2>
+  <div class="skills-container">
+    <div class="skill-row" data-aos="fade-up">
+      <div class="skill-card">
+        <p>HTML</p>
+        <div class="skill-bar"><div class="skill-level" style="width:90%;"></div></div>
+      </div>
+      <div class="skill-card">
+        <p>CSS</p>
+        <div class="skill-bar"><div class="skill-level" style="width:80%;"></div></div>
+      </div>
+    </div>
+    <div class="skill-row" data-aos="fade-up" data-aos-delay="100">
+      <div class="skill-card">
+        <p>JavaScript</p>
+        <div class="skill-bar"><div class="skill-level" style="width:85%;"></div></div>
+      </div>
+      <div class="skill-card">
+        <p>Photoshop</p>
+        <div class="skill-bar"><div class="skill-level" style="width:55%;"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2 data-aos="fade-right">Contact Me</h2>
+  <div class="contact-buttons" data-aos="fade-up">
+    <a href="https://www.linkedin.com/in/zoshen-lama-764246384" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://wa.me/+9779767232377" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  </div>
+  <form class="contact-form" action="https://formspree.io/f/xzzaljvq" method="POST" data-aos="fade-up">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+    <p class="form-feedback"></p>
+  </form>
+</section>
+
+<!-- Scroll to Top -->
+<button id="backToTop">&#8679;</button>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+<script>
+  AOS.init({ duration: 1000 });
+
+  // Ensure page loads at top
+  window.onbeforeunload = function () { window.scrollTo(0, 0); };
+</script>
+</body>
+</html>
